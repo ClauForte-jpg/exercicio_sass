@@ -1,0 +1,2 @@
+console.log('Gulp funcionando!');
+alert('Gulp compilou seu JS!');
