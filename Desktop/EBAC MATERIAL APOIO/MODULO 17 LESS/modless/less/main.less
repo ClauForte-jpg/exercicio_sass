@@ -1,0 +1,34 @@
+
+@import "variables.less";
+@import "mixins.less";
+
+section {
+    padding: @espacoExtra 0;
+}
+
+.products {
+    margin-top: 40px;
+    .grid-columns(3, 1%);
+    row-gap: 4%;
+    width: 100%;
+}
+
+.product-item img {
+    width: 100%;
+    border-radius: 16px;
+}
+
+.product-button {
+    display: block;
+    background-color: @corBotao;
+    color: @corTexto;
+    text-align: center;
+    padding: @espacoPequeno 0;
+    border-radius: 8px;
+    margin-top: @espacoPequeno;
+    text-decoration: none;
+
+    &:hover {
+        background-color: @corBotaoHover;
+    }
+}

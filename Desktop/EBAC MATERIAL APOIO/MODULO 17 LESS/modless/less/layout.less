@@ -1,0 +1,40 @@
+@import "variables.less";
+@import "mixins.less";
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: map(@cores, primario); // substitui @corHeader
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    .container {
+        .flex-center();
+        justify-content: space-between;
+        padding: map(@espacos, medio) 0; // substitui @espacoMedio
+    }
+}
+
+.menu {
+    display: flex;
+
+    li {
+        font-weight: bold;
+        margin-left: map(@espacos, grande); // substitui @espacoGrande
+
+        a {
+            color: map(@cores, texto); // substitui @corTexto
+            text-decoration: none;
+
+            &:hover {
+                color: map(@cores, destaque);
+            }
+        }
+    }
+}
+

@@ -1,0 +1,43 @@
+@import "mixins.less";
+@import "components.less";
+
+
+/* Botão padrão */
+.botao-padrao {
+    .botao(map(@cores, secundario), #fff); // usando mixin e mapa
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Botão de destaque */
+.botao-destaque {
+    .botao(map(@cores, destaque), #fff);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Card de produto */
+.card {
+    background-color: #fff;
+    border: 1px solid map(@cores, primario);
+    border-radius: 8px;
+    padding: map(@espacos, medio);
+    text-align: center;
+
+    img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: map(@espacos, pequeno);
+    }
+
+    h3 {
+        color: map(@cores, primario);
+        margin-bottom: map(@espacos, pequeno);
+    }
+
+    p {
+        color: map(@cores, texto);
+        font-size: 14px;
+    }
+}
+

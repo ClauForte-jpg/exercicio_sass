@@ -1,0 +1,55 @@
+/* styles.less */
+
+/* Importa todos os arquivos */
+
+@import "variables.less";
+@import "mixins.less";    // precisa vir antes de components.less
+@import "layout.less";
+@import "components.less";
+
+
+/* Ajustes globais */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Media Queries para responsividade */
+@media screen and (max-width: @tablet) {
+    .container {
+        max-width: 80%;
+    }
+
+    .products {
+        .grid-columns(2, 3%);
+    }
+
+    .menu li {
+        margin-left: map(@espacos, medio);
+    }
+}
+
+@media screen and (max-width: @mobile) {
+    header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu {
+        flex-direction: column;
+        margin-top: map(@espacos, pequeno);
+
+        li {
+            margin: map(@espacos, pequeno) 0;
+        }
+    }
+
+    .products {
+        display: block;
+        padding: 0 10px;
+
+        .product-item {
+            margin-bottom: 24px;
+        }
+    }
+}

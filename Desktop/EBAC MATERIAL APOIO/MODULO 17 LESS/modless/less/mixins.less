@@ -1,0 +1,22 @@
+
+// Centraliza elementos com flexbox
+.flex-center() {
+    display: flex;
+    align-items: center;
+}
+
+// Cria grid com colunas dinâmicas
+.grid-columns(@numColunas, @gap) {
+    display: grid;
+    grid-template-columns: repeat(@numColunas, (100% - (@gap * (@numColunas - 1))) / @numColunas);
+    column-gap: @gap;
+}
+
+.botao(@cor, @texto) {
+    background-color: @cor;
+    color: @texto;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
